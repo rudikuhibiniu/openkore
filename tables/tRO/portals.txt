@@ -3590,3 +3590,5 @@ prt_fild08h 16 239 prt_fild07 379 239 0 0
 prt_fild08h 16 187 prt_fild07 380 186 0 0
 prt_fild08h 233 16 moc_fild01 238 378 0 0
 prt_fild08h 55 21 moc_fild01 56 380 0 0
+payon 90 25 pay_fild01 334 359
+pay_fild01 334 359 payon 90 30

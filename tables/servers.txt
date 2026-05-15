@@ -98,6 +98,24 @@ serverEncoding Western
 charBlockSize 155
 addTableFolders euRO
 
+# https://roclassic.gnjoy.id/
+[Indonesia - idRO: RevoclassicR (Baphomet)]
+ip 103.210.209.43
+port 6900
+master_version 1
+version 1
+serverType idROClassic
+serverEncoding Western
+addTableFolders idROClassic;tRO
+charBlockSize 175
+charDeleteDateType 1
+blockingPlayerCancel 1
+rankingSystemType 1
+itemListType 1
+pinCode 1
+ignoreAntiCheatWarning 1
+secureLogin 0
+
 # https://ro.gnjoy.id/
 [Indonesia - idRO: Yggdrasil]
 ip 202.93.26.198

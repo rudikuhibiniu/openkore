@@ -142,6 +142,9 @@ Yellow Plant 0 0 0
 6046 -1 0 0
 
 
+##### Dangerous Normal Monsters #####
+Vagabond Wolf 0 1 0
+
 ##### MVPs and Dangerous Monsters #####
 ##MOB ID : MVP
 1511 -1 1 0 #Amon Ra
@@ -220,3 +223,5 @@ Yellow Plant 0 0 0
 1648 -1 1 0 #Whitesmith Harword
 1917 -1 1 0 #Wounded Morroc
 1658 -1 1 0 #Ygnizem
+
+default -1

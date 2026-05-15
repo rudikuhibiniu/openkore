@@ -10,4 +10,5 @@
 #Use the item name "all" to tell kore to pickup or not pickup all items by default
 all 1
 # jellopy 0
-# fluff 0
+# fluff 0Zeny 1
+all 1

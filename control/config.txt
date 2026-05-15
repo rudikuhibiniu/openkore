@@ -3,12 +3,12 @@
 
 ######## Login options and server-specific options ########
 
-master
-server
+master Indonesia - idRO: RevoclassicR (Baphomet)
+server 0
 username
 password
 loginPinCode
-char
+char 0
 otpSeed
 
 # Poseidon Settings: https://openkore.com/wiki/Poseidon
@@ -29,7 +29,7 @@ XKore_injectDLL 1
 XKore_autoAttachIfOneExe 1
 XKore_silent 1
 XKore_bypassBotDetection 0
-XKore_exeName ragexe.exe
+XKore_exeName Revoclassicr.exe
 
 # XKore 2 / Proxy configuration
 XKore_listenIp 127.0.0.1
@@ -41,13 +41,17 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword
+adminPassword guhauzau
 callSign
 commandPrefix ;
 callSignGM 0
 inGameAuth 0
 
 macAddress
+
+# idROClassic custom settings
+idroClassicHWID 0045-45FB-FB13-13E2
+idroClassicIPv6 2001:448a:20a2:5564:9000:8759:b54a:db01
 
 pauseCharLogin 2
 pauseCharServer 0
@@ -66,7 +70,7 @@ alias_heal sp 28
 allowedMaps
 allowedMaps_reaction 1
 
-attackAuto 2
+attackAuto 0
 attackAuto_routeToLock 1
 attackAuto_outOfLock 1
 attackAuto_party 1
@@ -138,12 +142,12 @@ autoMakeArrows 0
 
 autoRestart 0
 
-autoRestartMin 10800
+autoRestartMin 7200
 autoRestartSeed 3600
 
 autoRestartSleep 1
-autoSleepMin 900
-autoSleepSeed 900
+autoSleepMin 1200
+autoSleepSeed 1800
 
 autoResponse 0
 autoResponseOnHeal 0
@@ -213,7 +217,7 @@ cartMaxWeight 7900
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap
+lockMap gef_fild10
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -222,7 +226,7 @@ lockMap_randY
 route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
-route_randomWalk 1
+route_randomWalk 0
 route_randomWalk_inLockOnly 0
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
@@ -287,7 +291,7 @@ buyerShopAuto_open 0
 buyerShop_random 0
 
 sitAuto_hp_lower 40
-sitAuto_hp_upper 100
+sitAuto_hp_upper 50
 sitAuto_sp_lower 0
 sitAuto_sp_upper 0
 sitAuto_follow 0
@@ -726,6 +730,10 @@ useSelf_item {
 	# [checkSelfCondition]
 }
 
+useSelf_item Orange Potion {
+	hp < 70%
+}
+
 ######## Autostorage/autosell ########
 
 buyAuto {
@@ -979,4 +987,4 @@ avoidObstaclesDefaultPortals {
 #	target_isAIMode_TakesFixed_1_Damage_Magic 0
 #	target_isAIMode_TakesFixed_1_Damage_None 0
 #}
-
+macro_orphans terminate

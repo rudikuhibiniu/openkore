@@ -1,0 +1,58 @@
+# ==========================================================
+# BUFF TRIP SYSTEM - Thief / Rogue Bot
+# Lokasi support : pay_fild02 (153, 381)
+# ==========================================================
+
+automacro buffcheck {
+    StatusInactiveHandle EFST_BLESSING
+    InLockMap 1
+    NoMobNear 1
+    timeout 30
+    call getbuff
+}
+
+macro getbuff {
+    set overrideAI 1
+    set exclusive 1
+    log [BuffTrip] Blessing habis! Menuju support bot di gef_fild10 156 308...
+    do conf attackAuto 0
+    do conf route_randomWalk 0
+    do move gef_fild10 156 308
+    pause 10
+    log [BuffTrip] Buff diterima! Kembali ke area grinding...
+    do conf route_randomWalk 1
+    do conf attackAuto 2
+}
+
+# ==========================================================
+# STATUS QUERY - Balas whisper "@status" dengan info char
+# ==========================================================
+
+automacro statusQuery {
+#    PrivMsg /^\@status$/i
+    timeout 3
+    call statusReply
+}
+
+macro statusReply {
+    $sender = $.PrivMsgLastName
+    $blvl   = &eval($char->{lv})
+    $jlvl   = &eval($char->{lv_job})
+    $hp     = &eval($char->{hp})
+    $hpmax  = &eval($char->{hp_max})
+    $hppct  = &eval(int($char->{hp} / $char->{hp_max} * 100))
+    $sp     = &eval($char->{sp})
+    $spmax  = &eval($char->{sp_max})
+    $wt     = &eval($char->{weight})
+    $wtmax  = &eval($char->{weight_max})
+    $wtpct  = &eval(int($char->{weight} / $char->{weight_max} * 100))
+    $zeny   = &eval($char->{zeny})
+    $map    = &eval($field->baseName)
+    $px     = &eval($char->{pos_to}{x})
+    $py     = &eval($char->{pos_to}{y})
+    $name   = &nick
+    do pm $sender [BOT] Char: $name | Lv: $blvl | Job Lv: $jlvl
+    do pm $sender HP: $hp/$hpmax ($hppct%) | SP: $sp/$spmax
+    do pm $sender Weight: $wt/$wtmax ($wtpct%) | Zeny: $zeny z
+    do pm $sender Map: $map ($px, $py)
+}

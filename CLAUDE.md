@@ -176,6 +176,35 @@ npx @claude-flow/cli@latest doctor --fix
 
 ---
 
+## Git Setup
+
+### Branch
+- **`master`** — upstream OpenKore (jangan dimodif)
+- **`ROGUE`** — konfigurasi rogue bot + idROClassic (branch ini)
+
+### Remote
+```
+https://github.com/rudikuhibiniu/openkore.git
+```
+SSH tidak bisa (no key) — gunakan HTTPS.
+
+### Identity (set sekali per repo)
+```bash
+git config user.email "data.rudik@gmail.com"
+git config user.name "rudikuhibiniu"
+```
+
+### Workflow
+```bash
+git checkout ROGUE
+# ... edit files ...
+git add <files>   # jangan "git add ." — ada file garbage di root
+git commit -m "pesan"
+git push
+```
+
+---
+
 ## RevoclassicR (idRO Classic) — Verified Working Config
 
 ### How to Run
